@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IssueController;
+use App\Http\Controllers\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,6 @@ use App\Http\Controllers\IssueController;
 
 Route::get('/', function () {
     return view('welcome');
-    //return view('issues.createIssue');
 });
 
 Auth::routes();
@@ -24,3 +24,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('/issue',IssueController::class);
+Route::resource('/project',ProjectController::class);
