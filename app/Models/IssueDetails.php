@@ -10,10 +10,7 @@ class IssueDetails extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title',
-        'type',
-        'short_desc',
-        'desc',
-        'emp_id',
+        'user_id',
+        'project_id',
     ];
 }
