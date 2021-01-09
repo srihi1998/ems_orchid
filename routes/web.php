@@ -27,3 +27,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('/issue',IssueController::class);
 Route::resource('/project',ProjectController::class);
 Route::resource('/emp_proj',EmpProjController::class);
+
+Route::get('/issue_details/{id}/edit',[IssueController::class, 'edit1']);
+Route::post('/issue_details/{id}', [IssueController::class, 'update1']);
