@@ -5,7 +5,7 @@
 <form action="{{ route('issue.store') }}" method="POST">
     @csrf
     <fieldset>
-        <legend>Employee Form</legend>
+        <legend>Issues Form</legend>
         <div class="form-group row">
             <label for="title" class="col-sm-3 col-form-label">Title (required) :</label>
             <div class="col-sm-9">

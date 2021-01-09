@@ -14,6 +14,6 @@ class IssueDetails extends Model
         'type',
         'short_desc',
         'desc',
-        'emp_id',
+        'user_id',
     ];
 }
