@@ -10,10 +10,8 @@ class EmpProj extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title',
-        'type',
-        'short_desc',
-        'desc',
         'user_id',
+        'project_id',
+        'status',
     ];
 }
