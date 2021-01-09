@@ -34,8 +34,8 @@
                 <label class="col-form-label col-sm-3 pt-0" for="status">Status:</label>
                 <div class="col-sm-9">
                     <div class="form-check-input">
-                        <input class="form-check-input" type="radio" id="currently_working" name="gender" value="currently_working"> Currently Working
-                        <input class="form-check-input" type="radio" id="terminated" name="gender" value="terminated">Terminated
+                        <input class="form-check-input" type="radio" id="currently_working" name="status" value="currently_working"> Currently Working
+                        <input class="form-check-input" type="radio" id="terminated" name="status" value="terminated">Terminated
                     </div>
                 </div>
             </div>

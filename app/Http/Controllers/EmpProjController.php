@@ -18,6 +18,7 @@ class EmpProjController extends Controller
 
     public function store(Request $request)
     {
+        //dd($request->all());
         DB::table('emp_projs')->insert([
             'user_id' => $request->user_id,
             'project_id' => $request->project_id,
