@@ -19,7 +19,9 @@ class CreateIssueDetailsTable extends Migration
             $table->string('type');
             $table->text('short_desc');
             $table->longtext('desc');
+            $table->string('staus')->default('open');
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->dateTimeTz('update', $precision = 0)->nullable();
             $table->timestamps();
         });
     }

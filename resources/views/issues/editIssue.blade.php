@@ -4,6 +4,7 @@
 <p> {{ 'Title: '.$issueid->title }}<p>
 <p> {{ 'Type: '.$issueid->type }}<p>
 <p> {{ 'Short Description: '.$issueid->short_desc }}<p>
+<p> {{ 'Status: '.$issueid->staus }}</p>
 <p> {{ 'Description: '.$issueid->desc }}<p>
 @foreach ($emp as $user)
     <p> {{ 'Posted by: '.$user->name }}<p>
@@ -14,7 +15,6 @@
         <tr>
             <th scope="col">Resolved_by</th>
             <th scope="col">Comment</th>
-            <th scope="col">Staus</th>
             <th scope="col">Updated At</th>
         </tr>
     </thead>
@@ -23,8 +23,7 @@
         <tr scope='row' >
             <td>{{ $status->name }}</td>
             <td>{{ $status->comment }}</td>
-            <td>{{ $status->staus }}</td>
-            <td>{{ $status->updated_at }}</td>
+            <td>{{ $status->update }}</td>
         </tr>
         @endforeach
     </tbody>
@@ -58,8 +57,8 @@
                 <label class="col-form-label col-sm-3 pt-0" for="staus">Status:</label>
                 <div class="col-sm-9">
                     <div class="form-check-input">
-                        <input class="form-check-input" type="radio" id="in_progress" name="staus" value="in_progress"> In Progress
-                        <input class="form-check-input" type="radio" id="closed" name="staus" value="closed">Closed
+                        <input class="form-check-input" type="radio" id="In Progress" name="staus" value="In Progress"> In Progress
+                        <input class="form-check-input" type="radio" id="Closed" name="staus" value="Closed">Closed
                     </div>
                 </div>
             </div>
@@ -72,4 +71,6 @@
         </div>
     </fieldset>
 </form>
+
+<!--<a href="/profile"><button type="submit" class="btn btn-primary">Back</button></a>-->
 @endsection
