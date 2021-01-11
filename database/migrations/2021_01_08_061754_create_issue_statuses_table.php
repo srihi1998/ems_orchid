@@ -18,7 +18,7 @@ class CreateIssueStatusesTable extends Migration
             $table->foreignId('issue_id')->references('id')->on('issue_details')->onDelete('cascade');  
             $table->foreignId('resolved_by')->references('id')->on('users')->onDelete('cascade');    
             $table->longtext('comment');
-            $table->string('staus');
+            $table->dateTimeTz('update', $precision = 0)->nullable();
             $table->timestamps();
         });
     }
