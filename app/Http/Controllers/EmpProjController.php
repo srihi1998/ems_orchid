@@ -9,6 +9,7 @@ use App\Models\EmpProj;
 
 class EmpProjController extends Controller
 {
+    //Function to return view of createEmpProj blade file in project folder
     public function create()
     {
         $emps = DB::table('users')->get();
@@ -16,6 +17,7 @@ class EmpProjController extends Controller
         return view('project.createEmpProj',\compact('emps','projects'));
     }
 
+    //Function to store emp_projs data in database
     public function store(Request $request)
     {
         DB::table('emp_projs')->insert([

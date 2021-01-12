@@ -15,16 +15,19 @@ class IssueController extends Controller
         $this->middleware('auth');
     }
 
+    //Function to check the user type
     function check_user_type(){
         $type=auth()->user()->user_type;
         return $type;
     }
 
+    //Function to return view of createIssue blade file in issues folder
     public function create()
     {
         return view('issues.createIssue');
     }
 
+    //Function to store issue data in database
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -44,6 +47,7 @@ class IssueController extends Controller
     }
 
     
+    //Function to extract required data from database and send to editIssue blade file
     public function edit1($id)
     {
         $user_type=$this->check_user_type();
@@ -63,6 +67,7 @@ class IssueController extends Controller
         return redirect()->back()->with('message','You Don\'t Have Access to the Page');
     }
 
+    //Function to modify and update issue status
     public function update1(Request $request,$id)
     {
         DB::table('issue_statuses')->insert([
