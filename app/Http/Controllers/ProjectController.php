@@ -8,11 +8,13 @@ use App\Models\Project;
 
 class ProjectController extends Controller
 {
+    //Function to return view of createProject blade file in project folder
     public function create()
     {
         return view('project.createProject');
     }
 
+    //Function to store project data in database
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
